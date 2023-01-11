@@ -7,7 +7,6 @@ export default {
     data() {
         return {
             store,
-            yuGiHoList : [],
         }
     },
     methods: {
@@ -18,7 +17,7 @@ export default {
             })
                 .then((response) => {
                     console.log(response.data.data);
-                    this.yuGiHoList = response.data.data;
+                    this.store.yuGiHoList = response.data.data;
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -32,7 +31,7 @@ export default {
 </script>
 
 <template>
-    <div v-for="element in yuGiHoList">
+    <div v-for="element in store.yuGiHoList">
         {{ element.name }}
     </div>
 </template>
