@@ -1,11 +1,13 @@
 <script>
 import AppMain from './components/AppMain.vue'
 import AppHeader from './components/AppHeader.vue'
+import AppCards from './components/AppCards.vue'
 
 export default{
   components : {
     AppHeader,
     AppMain,
+    AppCards,
   }
 }
 </script>
@@ -16,17 +18,21 @@ export default{
   </header>
   <main>
     <AppMain />
+    <AppCards />
   </main>
 </template>
 
 <style lang="scss">
 @use './styles/general.scss' as *;
 @use './styles/partials/variables.scss' as *;
-@use 'bootstrap/scss/bootstrap.scss' as *;
+
+header{
+  background-color: white;
+  margin-bottom: 1rem;
+}
 
 main{
-  max-width: 1000px;
-  border: 2px solid red;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 </style>

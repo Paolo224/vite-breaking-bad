@@ -31,11 +31,17 @@ export default {
 </script>
 
 <template>
-    <div v-for="element in store.yuGiHoList">
-        {{ element.name }}
+    <div class="counter-cards">
+        Found {{ store.yuGiHoList.length }} cards
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+    div.counter-cards{
+        background-color: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: .5rem;
+    }
 </style>
