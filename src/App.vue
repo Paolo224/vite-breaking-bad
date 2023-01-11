@@ -29,6 +29,9 @@ export default{
 header{
   background-color: white;
   margin-bottom: 1rem;
+  display: flex;
+  height: 70px;
+  align-items: center;
 }
 
 main{
