@@ -18,8 +18,11 @@ export default {
             <img :src="element.card_images[0].image_url" alt="">
             <div class="card-text">
                 {{ element.name }}
-                <p>
+                <p v-if="element.archetype">
                     {{ element.archetype }}
+                </p>
+                <p v-else>
+                    Archetipo non definito
                 </p>
             </div>
         </div>
