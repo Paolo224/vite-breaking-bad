@@ -1,12 +1,18 @@
 <script>
-export default {
+import { store } from '../store.js'
 
+export default {
+data(){
+    return{
+        
+    }
+}
 }
 </script>
 
 <template>
-    <div>
-        <select name="archetypes" id="archetypes" @keyup.enter="$emit('newRequest')">
+    <div class="select">
+        <select name="archetypes" id="archetypes" @change="$emit('newRequest')">
             <option value="Alien">Alien</option>
             <option value="Laval">Laval</option>
             <option value="Vylon">Vylon</option>
@@ -18,5 +24,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+div.select {
+    padding: .4rem;
 
+    select {
+        width: 20%;
+        padding: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 700
+    }
+}
 </style>

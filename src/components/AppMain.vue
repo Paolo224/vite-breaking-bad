@@ -14,7 +14,9 @@ export default {
     methods: {
         getElementYuGiHo() {
             axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0 ", {
-                params: {}
+                params: {
+                    
+                }
             })
                 .then((response) => {
                 console.log(response.data.data);
@@ -26,7 +28,7 @@ export default {
         },
 
         prova(){
-            console.warn('ECCOMI!')
+            console.log('eccomi!')
         }
     },
     created() {
