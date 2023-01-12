@@ -23,6 +23,10 @@ export default {
                 .catch(function (error) {
                 console.log(error);
             });
+        },
+
+        prova(){
+            console.warn('ECCOMI!')
         }
     },
     created() {
@@ -36,7 +40,7 @@ export default {
 </script>
 
 <template>
-    <AppArchetypes />
+    <AppArchetypes @newRequest="prova()" />
     <div class="counter-cards">
         Found {{ store.yuGiHoList.length }} cards
     </div>
