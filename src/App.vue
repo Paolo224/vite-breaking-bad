@@ -1,13 +1,11 @@
 <script>
 import AppMain from './components/AppMain.vue'
 import AppHeader from './components/AppHeader.vue'
-import AppCards from './components/AppCards.vue'
 
 export default{
   components : {
     AppHeader,
     AppMain,
-    AppCards,
   }
 }
 </script>
@@ -18,7 +16,6 @@ export default{
   </header>
   <main>
     <AppMain />
-    <AppCards />
   </main>
 </template>
 
