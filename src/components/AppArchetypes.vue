@@ -4,7 +4,7 @@ import { store } from '../store.js'
 export default {
 data(){
     return{
-        
+        archetypes : null,
     }
 }
 }
@@ -12,7 +12,7 @@ data(){
 
 <template>
     <div class="select">
-        <select name="archetypes" id="archetypes" @change="$emit('newRequest')">
+        <select name="archetypes" id="archetypes" @change="$emit('newRequest', archetypes )" v-model="archetypes">
             <option value="Alien">Alien</option>
             <option value="Laval">Laval</option>
             <option value="Vylon">Vylon</option>

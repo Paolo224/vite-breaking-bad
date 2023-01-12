@@ -12,10 +12,10 @@ export default {
         };
     },
     methods: {
-        getElementYuGiHo() {
+        getElementYuGiHo(archetypes) {
             axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0 ", {
                 params: {
-                    
+                    archetype : archetypes 
                 }
             })
                 .then((response) => {
@@ -26,10 +26,6 @@ export default {
                 console.log(error);
             });
         },
-
-        prova(){
-            console.log('eccomi!')
-        }
     },
     created() {
         this.getElementYuGiHo();
@@ -42,7 +38,7 @@ export default {
 </script>
 
 <template>
-    <AppArchetypes @newRequest="prova()" />
+    <AppArchetypes @newRequest="getElementYuGiHo" />
     <div class="counter-cards">
         Found {{ store.yuGiHoList.length }} cards
     </div>
